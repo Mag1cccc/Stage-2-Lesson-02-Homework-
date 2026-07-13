@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using Practice_MVC.Filters;
 using Practice_MVC.Models;
 using System.Diagnostics;
 
 namespace Practice_MVC.Controllers
 {
+    [TypeFilter(typeof(BookingNotAllowedFilter))]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
