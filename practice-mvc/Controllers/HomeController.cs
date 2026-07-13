@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
-using Practice_MVC.Filters;
+//using Practice_MVC.Filters;
 using Practice_MVC.Models;
 using System.Diagnostics;
 
 namespace Practice_MVC.Controllers
 {
-    [TypeFilter(typeof(BookingNotAllowedFilter))]
+    //[TypeFilter(typeof(BookingNotAllowedFilter))]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -24,6 +24,11 @@ namespace Practice_MVC.Controllers
         {
             return View();
         }
+
+        //public IActionResult BookingNotAllowed()
+        //{
+        //    return View();
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
