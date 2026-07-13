@@ -1,3 +1,5 @@
+using Practice_MVC.Middlewares;
+
 namespace Practice_MVC
 {
     public class Program
@@ -19,6 +21,8 @@ namespace Practice_MVC
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseMiddleware<BookingMiddleware>();
 
             app.UseAuthorization();
 
